@@ -1,0 +1,140 @@
+
+
+
+/*===========================
+     7.CLIENT SAY css 
+===========================*/
+
+
+
+.client-say-area{}
+
+.single-client-card{
+    border-radius: 10px;
+    @include box-shadow ( 0px 5px 20px 0px rgba(0,0,0,0.05));
+    background-color: $white;
+    
+    & .client-card-image{
+        padding-top: 20px;
+        padding-bottom: 25px;
+        
+        & img{
+            width: 90px;
+            border-radius: 50%;
+        }
+    }
+    & .client-card-content{
+        padding-bottom: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+        
+        & .title{
+            & a{
+                font-size: 18px;
+                font-weight: 700;
+                font-style: italic;
+                color: $heading-color;
+                @include transition(0.3s);
+                
+                &:hover{
+                    color: $theme-color;
+                }
+            }
+        }
+        & .text{
+            margin-top: 13px;
+        }
+    }
+    & .client-card-meta{
+        border-top: 1px solid $border-color;
+        
+        & a{
+            padding: 8px 20px;
+            font-size: 14px;
+            color: $body-color;
+            
+            &.share{
+                border-left: 1px solid $border-color;
+                color: $theme-color;
+            }
+        }
+    }
+    
+    &.client-card-red{
+        & .client-card-content{
+            & .title{
+                & a{
+                    &:hover{
+                        color: $theme-color-2;
+                    }
+                }
+            }
+        }
+        & .client-card-meta{
+            & a{
+                &.share{
+                    color: $theme-color-2;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+.client-testimonial{
+    & .sub-title{
+        font-size: 18px;
+        font-family: $opensans;
+        font-weight: 600;
+        color: $theme-color;
+    }
+    & .title{
+        text-decoration: underline;
+        font-size: 24px;
+        margin-top: 16px;
+    }
+    & .text{
+        margin-top: 25px;
+    }
+    & .main-btn{
+        margin-top: 30px;
+        line-height: 48px;
+        font-family: $lora;
+        font-style: italic;
+        font-weight: 700;
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

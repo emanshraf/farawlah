@@ -1,0 +1,107 @@
+
+
+
+/*===========================
+     5.INVENTORY css 
+===========================*/
+
+
+
+.inventory-area{}
+
+
+.single-inventory{
+    & .inventory-icon{
+        display: inline-block;
+        position: relative;
+        
+        & i{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            @include transform(translate(-50%, -50%));
+            font-size: 58px;
+            color: $body-color;
+            @include transition(0.3s);
+        }
+        
+    }
+    & .inventory-content{
+        margin-top: 20px;
+        
+        & .title{
+            & a{
+                font-size: 18px;
+                font-style: italic;
+                color: $heading-color;
+                @include transition(0.3s);
+            }
+        }
+        & .text{
+            margin-top: 13px;
+        }
+    }
+    
+    &:hover{
+        & .inventory-icon{
+            & i{
+                color: $theme-color;
+            }
+        }
+        & .inventory-content{
+            & .title{
+                & a{
+                    color: $theme-color;
+                }
+            }
+        }
+    }
+    
+    &.inventory-red{
+        &:hover{
+            & .inventory-icon{
+                & i{
+                    color: $theme-color-2;
+                }
+            }
+            & .inventory-content{
+                & .title{
+                    & a{
+                        color: $theme-color-2;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

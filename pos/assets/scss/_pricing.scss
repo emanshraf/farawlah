@@ -1,0 +1,301 @@
+
+
+
+/*===========================
+     8.PRICING css 
+===========================*/
+
+
+
+.pricing-area{}
+
+
+
+.single-pricing{
+    @include box-shadow ( 0px 5px 20px 0px rgba(0,0,0,0.05));
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 50px 20px;
+    position: relative;
+    margin-top: 30px;
+    z-index: 5;
+    
+    &::before{
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: -webkit-linear-gradient(left, rgba(58,187,105,1) 0%, rgba(0,149,54,1) 100%);
+        background: -o-linear-gradient(left, rgba(58,187,105,1) 0%, rgba(0,149,54,1) 100%);
+        background: linear-gradient(to right, rgba(58,187,105,1) 0%, rgba(0,149,54,1) 100%);
+        z-index: -1;
+        opacity: 0;
+        @include transition(0.3s);
+    }
+    
+    & .pricing-icon{
+        & i{
+            width: 57px;
+            height: 57px;
+            line-height: 57px;
+            text-align: center;
+            font-size: 30px;
+            color: $white;
+            background: -webkit-linear-gradient(left, rgba(58,187,105,1) 0%, rgba(0,149,54,1) 100%);
+            background: -o-linear-gradient(left, rgba(58,187,105,1) 0%, rgba(0,149,54,1) 100%);
+            background: linear-gradient(to right, rgba(58,187,105,1) 0%, rgba(0,149,54,1) 100%);
+            border-radius: 5px;
+            @include box-shadow ( 0px 5px 10px 0px rgba(0,0,0,0.20));
+        }
+    }
+    & .pricing-content{
+        margin-top: 25px;
+        
+        & .pricing-title{
+            font-weight: 700;
+            font-size: 32px;
+            font-style: italic;
+        }
+        & .pricing-list{
+            margin-top: 15px;
+            
+            & li{
+                font-size: 16px;
+                color: $body-color;
+                line-height: 30px;
+                font-family: $lora;
+                font-style: italic;
+                
+                & i{
+                    color: $theme-color;
+                    margin-right: 5px;
+                    font-size: 18px;
+                }
+            }
+        }
+        & .pricing-price{
+            padding-top: 30px;
+            
+            & p{
+                font-size: 32px;
+                font-weight: 700;
+                font-family: $lora;
+                font-style: italic;
+                color: $theme-color;
+                position: relative;
+                display: inline-block;
+                
+                & sup{
+                    font-size: 14px;
+                    color: $white;
+                    width: 20px;
+                    height: 20px;
+                    line-height: 20px;
+                    text-align: center;
+                    border-radius: 50%;
+                    background: -webkit-linear-gradient(left, rgba(58,187,105,1) 0%, rgba(0,149,54,1) 100%);
+                    background: -o-linear-gradient(left, rgba(58,187,105,1) 0%, rgba(0,149,54,1) 100%);
+                    background: linear-gradient(to right, rgba(58,187,105,1) 0%, rgba(0,149,54,1) 100%);
+                    display: inline-block;
+                    position: absolute;
+                    top: -10px;
+                    left: -22px;
+                    @include box-shadow ( 0px 5px 10px 0px rgba(0,0,0,0.2));
+                }
+                & span{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    & .pricing-btn{
+        position: absolute;
+        @include transform(rotate(-90deg));
+        bottom: 83px;
+        right: -33px;
+        
+        @media #{$lg} {
+            bottom: 50px;
+        }
+        
+        & .main-btn{
+            line-height: 36px;
+            font-family: $lora;
+            font-style: italic;
+            font-weight: 700;
+            font-size: 14px;
+            @include transition(0s);
+            @include box-shadow ( -5px 0px 10px 0px rgba(0,0,0,0.2));
+        }
+    }
+    
+    &:hover{
+        &::before{
+            opacity: 1;
+        }
+        
+        & .pricing-icon{
+            & i{
+                background: $white;
+                color: $theme-color;
+            }
+        }
+        
+        & .pricing-content{
+            & .pricing-title{
+                color: $white;
+            }
+            & .pricing-list{
+                & li{
+                    color: $white;
+                    
+                    & i{
+                        color: $white;
+                    }
+                }
+            }
+            & .pricing-price{
+                & p{
+                    color: $white;
+                    
+                    & sup{
+                        background: $white;
+                        color: $theme-color;
+                    }
+                }
+            }
+        }
+        & .pricing-btn{
+            & .main-btn{
+                background: $white;
+                color: $theme-color;
+            }
+        }
+    }
+    
+    &.pricing-red{
+        &::before{
+            background: -webkit-linear-gradient(left, rgba(202,10,10,1) 0%, rgba(151,8,8,1) 100%);
+            background: -o-linear-gradient(left, rgba(202,10,10,1) 0%, rgba(151,8,8,1) 100%);
+            background: linear-gradient(to right, rgba(202,10,10,1) 0%, rgba(151,8,8,1) 100%);
+        }
+        
+        & .pricing-icon{
+            & i{
+                background: -webkit-linear-gradient(left, rgba(202,10,10,1) 0%, rgba(151,8,8,1) 100%);
+                background: -o-linear-gradient(left, rgba(202,10,10,1) 0%, rgba(151,8,8,1) 100%);
+                background: linear-gradient(to right, rgba(202,10,10,1) 0%, rgba(151,8,8,1) 100%);
+            }
+        }
+        
+        & .pricing-content{
+            & li{
+                & i{
+                    color: $theme-color-2;
+                }
+            }
+        }
+        
+        & .pricing-price{
+            & p{
+                color: $theme-color-2;
+                
+                & sup{
+                    background: -webkit-linear-gradient(left, rgba(202,10,10,1) 0%, rgba(151,8,8,1) 100%);
+                    background: -o-linear-gradient(left, rgba(202,10,10,1) 0%, rgba(151,8,8,1) 100%);
+                    background: linear-gradient(to right, rgba(202,10,10,1) 0%, rgba(151,8,8,1) 100%);
+                }
+            }
+        }
+        
+        &:hover{
+            & .pricing-icon{
+                & i{
+                    background: $white;
+                    color: $theme-color-2;
+                }
+            }
+
+            & .pricing-content{
+                & .pricing-price{
+                    & p{
+                        & sup{
+                            color: $theme-color-2;
+                        }
+                    }
+                }
+            }
+            & .pricing-btn{
+                & .main-btn{
+                    color: $theme-color-2;
+                }
+            }
+        }
+    }
+}
+
+
+
+.pricing-active{
+    & .slick-dots{
+        text-align: center;
+        
+        & li{
+            line-height: 10px;
+            display: inline-block;
+            margin: 0 2px;
+            
+            & button{
+                font-size: 0;
+                width: 20px;
+                height: 4px;
+                background: #0e2354;
+                padding: 0;
+                @include box-shadow ( 0px 5px 10px 0px rgba(0,0,0,0.2));
+                border: 0;
+            }
+            
+            &.slick-active{
+                & button{
+                    background: -webkit-linear-gradient(left, rgba(58,187,105,1) 0%, rgba(0,149,54,1) 100%);
+                    background: -o-linear-gradient(left, rgba(58,187,105,1) 0%, rgba(0,149,54,1) 100%);
+                    background: linear-gradient(to right, rgba(58,187,105,1) 0%, rgba(0,149,54,1) 100%);
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

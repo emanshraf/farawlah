@@ -1,0 +1,161 @@
+
+
+
+/*===========================
+    4.CLIENT css 
+===========================*/
+
+.client-area{
+    position: relative;    
+    
+    &::before{
+        position: absolute;
+        content: '';
+        background-image: url(../images/dots-left.png);
+        background-size: cover;
+        background-position: center center;
+        height: 100%;
+        max-width: 315px;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    &::after{
+        position: absolute;
+        content: '';
+        background-image: url(../images/dots-right.png);
+        background-size: cover;
+        background-position: center center;
+        height: 100%;
+        max-width: 315px;
+        width: 100%;
+        right: 0;
+        top: 0;
+        z-index: -1;
+    }
+    
+    &.shape-none{
+        &::before,
+        &::after{
+            display: none;
+        }
+    }
+}
+
+
+.single-client{
+    margin: 30px 0;
+    & img{
+        width: 100%;
+        opacity: 0.5;
+        @include transition(0.3s);
+    }
+    
+    &:hover{
+        & img{
+            opacity: 1;
+        }
+    }
+}
+
+
+
+.client-video{
+    padding-top: 40px;
+    position: relative;
+    
+    & img{
+        width: 100%;
+    }
+    
+    & .video-popup{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include transform(translate(-50%, -50%));
+        width: 50px;
+        height: 50px;
+        line-height: 48px;
+        text-align: center;
+        font-size: 24px;
+        color: $white;
+        border-radius: 50%;
+        z-index: 5;
+        
+        &::before{
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: $white;
+            left: 0;
+            top: 0;
+            border-radius: 50%;
+            z-index: -1;
+            @include transform(scale(2));
+        }
+        &::after{
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: -webkit-linear-gradient(left, rgba(58,187,105,1) 0%, rgba(0,149,54,1) 50%, rgba(58,187,105,1) 100%);
+            background: -o-linear-gradient(left, rgba(58,187,105,1) 0%, rgba(0,149,54,1) 50%, rgba(58,187,105,1) 100%);
+            background: linear-gradient(to right, rgba(58,187,105,1) 0%, rgba(0,149,54,1) 50%, rgba(58,187,105,1) 100%);
+            background-size: 200% auto;
+            left: 0;
+            top: 0;
+            border-radius: 50%;
+            z-index: -1;
+            @include transition(0.3s);
+        }
+        
+        &:hover{
+            &::after{
+                background-position: right center;
+            }
+        }
+    }
+    
+    &.video-red{
+        & .video-popup{
+            &::after{
+                background: -webkit-linear-gradient(left, rgb(202, 10, 10) 0%, rgb(151, 8, 8) 50%, rgb(202, 10, 10) 100%);
+                background: -o-linear-gradient(left, rgb(202, 10, 10) 0%, rgb(151, 8, 8) 50%, rgb(202, 10, 10) 100%);
+                background: linear-gradient(to right, rgb(202, 10, 10) 0%, rgb(151, 8, 8) 50%, rgb(202, 10, 10) 100%);
+                background-size: 200% auto;
+            }
+            
+            &:hover{
+                &::after{
+                    background-position: right center;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
